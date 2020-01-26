@@ -63,7 +63,7 @@ main(){
 		 }
 		
 		
-		if(qtdcomprada>=1000){
+		if(qtdcomprada>=1000){//quantidade escolhida para estar apta ao desconto
 			while(fgetc(stdin)!='\n');	
 			printf("Deseja aplicar desconto? TECLE 'S' para sim: ");
 			scanf("%c",&opdesc);
@@ -83,12 +83,12 @@ main(){
 		 }//fim else
 		
 		
-		//processamento das funções -individual 
+		//processamento das funÃ§Ãµes -individual 
 		totalimpostocarga=calculaImposto(valortotalsemimpostocarga);
 		valortotalcarga=calculaValorTotal(valortotalsemimpostocarga,totalimpostocarga);
 		
 		
-		//saída individual
+		//saÃ­da individual
 		printf("\nCliente:%s\n",nomecliente);
 		printf("ICMS: R$%.2f IPI: R$%.2f PIS: R$%.2f CONFINS: R$%.2f     TOTAL: R$%.2f\n",valortotalsemimpostocarga*ICMS,valortotalsemimpostocarga*IPI,valortotalsemimpostocarga*PIS,valortotalsemimpostocarga*CONFINS,valortotalcarga);
 		
@@ -99,7 +99,7 @@ main(){
 		valortotal=valortotalsemimposto+totalimposto;
 		
 		
-		//Validação par continua o laço
+		//ValidaÃ§Ã£o par continua o laÃ§o
 		printf("\nPara sair pressione 0 ou qualquer outra tecla para continuar\n");
 		scanf("%i",&opcao);
 		while(fgetc(stdin)!='\n');
@@ -108,7 +108,7 @@ main(){
 	}while(opcao!=0);//fim do while
 	
 	
-	//saídas todos!
+	//saÃ­das todos!
 		printf("\nTotal imposto: %.2f\n",totalimposto);
 		printf("Total mercadorias: %.2f\n",valortotalsemimposto);
 		printf("Total geral: %.2f\n",valortotal);
